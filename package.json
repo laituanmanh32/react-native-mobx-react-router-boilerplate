@@ -1,0 +1,51 @@
+{
+  "name": "delaro_final",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android:device": "cd android && ./gradlew assembleRelease && cd .. && react-native run-android --variant=release",
+    "android:simulator": "react-native run-android",
+    "ios": "react-native run-ios --simulator=\"iPhone 6 Plus\"",
+    "ios:5s": "react-native run-ios --simulator=\"iPhone 5s\"",
+    "ios:ipad": "react-native run-ios --simulator=\"iPad Air 2\"",
+    "lint": "eslint .",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test:coverage": "NODE_ENV=test ./node_modules/.bin/jest --config .jestrc --coverage",
+    "test:jest": "NODE_ENV=test ./node_modules/.bin/jest --config .jestrc --verbose",
+    "test:watch": "NODE_ENV=test ./node_modules/.bin/jest --config .jestrc --watch",
+    "test": "npm run lint && npm run test:jest"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "lodash": "4.17.11",
+    "mobx": "4.4.2",
+    "mobx-react": "5.1.0",
+    "moment": "2.22.2",
+    "prop-types": "15.6.2",
+    "react": "16.5.0",
+    "react-native": "0.57.1",
+    "react-native-device-info": "0.22.5",
+    "react-native-extended-stylesheet": "0.9.0",
+    "react-navigation": "2.16.0",
+    "react-router-native": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-preset-react-native": "^4.0.1",
+    "eslint": "5.6.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "^0.45.5",
+    "react-test-renderer": "16.5.2",
+    "schedule": "^0.4.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
